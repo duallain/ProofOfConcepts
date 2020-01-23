@@ -3,4 +3,4 @@ A place to store little proofs of concepts.
 
 # Completed:
 
-[Ingress Controller (Voyager)](.IngressController/summary.md)
+[Ingress Controller (Voyager)](IngressController/summary.md)
