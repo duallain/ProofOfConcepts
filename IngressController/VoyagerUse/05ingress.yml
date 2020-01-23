@@ -1,0 +1,29 @@
+apiVersion: voyager.appscode.com/v1beta1
+kind: Ingress
+metadata:
+  name: echo-ingress
+  namespace: default
+  annotations:
+   ingress.appscode.com/annotations-service: |
+       {
+         "external-dns.alpha.kubernetes.io/hostname" : "echo-demo.ramzom.org,shared-demo.ramzom.org"
+       }
+spec:
+  tls:
+  - secretName: tls-ramzom
+    hosts:
+    - echo-demo.ramzom.org
+    - shared-demo.ramzom.org
+  rules:
+  - host: echo-demo.ramzom.org
+    http:
+      paths:
+      - backend:
+          serviceName: echoserver
+          servicePort: 80
+  - host: shared-demo.ramzom.org
+    http:
+      paths:
+      - backend:
+          serviceName: example
+          servicePort: 80

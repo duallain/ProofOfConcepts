@@ -1,0 +1,12 @@
+apiVersion: voyager.appscode.com/v1beta1
+kind: Certificate
+metadata:
+  name: ramzom
+  namespace: default
+spec:
+  domains:
+  - '*.ramzom.org'
+  acmeUserSecretName: acme-account
+  challengeProvider:
+    dns:
+      provider: route53
