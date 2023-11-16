@@ -3,7 +3,7 @@ import sqlite3
 
 
 class ChessGame:
-    def __init__(self, player1, player2, sqlite_db="chess_results.sql") -> None:
+    def __init__(self, player1, player2, sqlite_db="chess_results.sqlite") -> None:
         self.board = chess.Board()
         self.moves = []
         self.player1 = player1
