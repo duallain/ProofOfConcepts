@@ -7,6 +7,10 @@ def random_player(board):
     move = random.choice(list(board.legal_moves))
     return move.uci()
 
+    self.__name__ = 'random_player'
+    
+
+
 def stockfish_generator(time=0.1):
     # return a function that already has a time set
     # name should reflect the time
