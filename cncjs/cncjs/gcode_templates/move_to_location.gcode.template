@@ -1,0 +1,6 @@
+G21 ; Metric
+M5;Stop spindle
+
+G90
+G53 Z{{ z_safe_height }}
+G53 X{{x_loc}} Y{{y_loc}}
